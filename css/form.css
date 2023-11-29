@@ -1,0 +1,53 @@
+.form {
+    margin: auto;
+    padding: 50px;
+    max-width: 600px;
+    background-color: #cdc3c3;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.form__legend {
+    font-size: 28px;
+    color: #750606;
+}
+
+.form__container {
+    line-height: 2.5;
+}
+
+.form__amount:required {
+    background-color: #efd48f;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form__amount:required {
+    border-color: black;
+}
+
+.form__currency {
+    background-color: #d4ae4d;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.form__button {
+    border-radius: 5px;
+    margin: 0px 10px 0px 10px;
+    padding: 7px 10px;
+    font-size: 20px;
+    background-color: #d4ae4d;
+}
+
+.form__result {
+    color: rgb(106, 5, 5);
+    background-color: #efd48f;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 30px;
+
+}

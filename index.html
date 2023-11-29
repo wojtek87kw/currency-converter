@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <title>Kantor</title>
+</head>
+
+<body class="body">
+    <form class="js-form form" name="form">
+        <fieldset>
+            <legend class="form__legend">KANTOR WALUT</legend>
+            <span class="form__container">Przelicz złotówki na inną walutę</span>
+            <label>
+                <input class="js-amount form__amount" required name="amount" type="number" min="0.1" step="0.1"
+                    placeholder="Wpisz wartość w PLN" autofocus></label>
+            <p>
+                <label>Wymień na</label>
+                <label>
+                    <select class="js-currency form__currency" name="currency">
+                        <option value="USD">Dolar amerykański</option>
+                        <option value="EURO">Euro</option>
+                        <option value="GBP">Funt brytyjski</option>
+                    </select>
+                </label>
+            </p>
+            <button class="form__button">Oblicz</button>
+            <button class="js-button form__button" type="reset">Wyczyść</button>
+            <p>WYNIK</p>
+            <span class="js-result form__result">0</span>
+        </fieldset>
+    </form>
+</body>
+
+</html>

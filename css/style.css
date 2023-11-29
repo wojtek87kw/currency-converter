@@ -1,0 +1,19 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+.body {
+    text-align: center;
+    max-width: 600px;
+    padding: 10px;
+    margin: 30px auto;
+    background-image: url("../images/background.jpeg");
+    background-repeat:round;
+}
+
