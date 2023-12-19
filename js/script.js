@@ -1,36 +1,52 @@
-let formElement = document.querySelector(".js-form");
-let amountElement = document.querySelector(".js-amount");
-let currencyElement = document.querySelector(".js-currency");
-let resultElement = document.querySelector(".js-result");
-
-let USD = 4.13;
-let EURO = 4.44;
-let GBP = 5.12;
-
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    let amount = +amountElement.value;
-    let currency = currencyElement.value;
-    let result; 
-
-
-    switch (currency) {
+{
+    const calculateResult = (amount, currency) => {
+      const USD = 4.13;
+      const EURO = 4.44;
+      const GBP = 5.12;
+  
+      switch (amount, currency) {
         case "USD":
-            result = amount / USD;
-            break;
+          return amount / USD;
+  
         case "EURO":
-            result = amount / EURO;
-            break;
+          return amount / EURO;
+  
         case "GBP":
-            result = amount / GBP;
-            break;
+          return amount / GBP;
+      }
+    };
+  
+    const updateResult = (amount, result, currency) => {
+      const resultElement = document.querySelector(".js-result");
+      resultElement.innerHTML = `${amount} PLN =  ${result.toFixed(2)} ${currency}`;
     }
-
-
-    resultElement.innerHTML = `${amount} PLN =  ${result.toFixed(2)} ${currency}`;
-})
-
-formElement.addEventListener('reset', () => {
-    resultElement.innerText = '0';
-});
+  
+    const onFormSubmit = (event) => {
+      event.preventDefault();
+  
+      const amountElement = document.querySelector(".js-amount");
+      const currencyElement = document.querySelector(".js-currency");
+  
+      const amount = +amountElement.value;
+      const currency = currencyElement.value;
+  
+      const result = calculateResult(amount, currency);
+  
+      updateResult(amount, result, currency);
+  
+    };
+  
+    const init = () => {
+      const formElement = document.querySelector(".js-form");
+  
+      formElement.addEventListener("submit", onFormSubmit);
+    };
+  
+    init();
+  
+    formElement.addEventListener('reset', () => {
+      resultElement.innerText = '0';
+    });
+  
+  }
+  
